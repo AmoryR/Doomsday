@@ -11,6 +11,10 @@
 		965F135A27A6FCA300E8A9F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F135927A6FCA300E8A9F8 /* ContentView.swift */; };
 		965F135C27A6FCA500E8A9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F135B27A6FCA500E8A9F8 /* Assets.xcassets */; };
 		965F135F27A6FCA500E8A9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F135E27A6FCA500E8A9F8 /* Preview Assets.xcassets */; };
+		965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136A27A704E600E8A9F8 /* Date+Extensions.swift */; };
+		965F136D27A7066300E8A9F8 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136C27A7066300E8A9F8 /* Days.swift */; };
+		965F136F27A708AD00E8A9F8 /* GuessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136E27A708AD00E8A9F8 /* GuessResult.swift */; };
+		965F137127A7096F00E8A9F8 /* DateGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F137027A7096F00E8A9F8 /* DateGuess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		965F135927A6FCA300E8A9F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		965F135B27A6FCA500E8A9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		965F135E27A6FCA500E8A9F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		965F136A27A704E600E8A9F8 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		965F136C27A7066300E8A9F8 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		965F136E27A708AD00E8A9F8 /* GuessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessResult.swift; sourceTree = "<group>"; };
+		965F137027A7096F00E8A9F8 /* DateGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGuess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		965F135627A6FCA300E8A9F8 /* Doomsday */ = {
 			isa = PBXGroup;
 			children = (
+				965F136827A703A900E8A9F8 /* Core */,
+				965F136727A703A300E8A9F8 /* Services */,
+				965F136627A7039D00E8A9F8 /* Views */,
+				965F136527A7039000E8A9F8 /* Models */,
 				965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */,
 				965F135927A6FCA300E8A9F8 /* ContentView.swift */,
 				965F135B27A6FCA500E8A9F8 /* Assets.xcassets */,
@@ -65,6 +77,46 @@
 				965F135E27A6FCA500E8A9F8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		965F136527A7039000E8A9F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		965F136627A7039D00E8A9F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		965F136727A703A300E8A9F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		965F136827A703A900E8A9F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				965F136927A704D800E8A9F8 /* Extensions */,
+				965F136C27A7066300E8A9F8 /* Days.swift */,
+				965F136E27A708AD00E8A9F8 /* GuessResult.swift */,
+				965F137027A7096F00E8A9F8 /* DateGuess.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		965F136927A704D800E8A9F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				965F136A27A704E600E8A9F8 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +191,10 @@
 			files = (
 				965F135A27A6FCA300E8A9F8 /* ContentView.swift in Sources */,
 				965F135827A6FCA300E8A9F8 /* DoomsdayApp.swift in Sources */,
+				965F136D27A7066300E8A9F8 /* Days.swift in Sources */,
+				965F136F27A708AD00E8A9F8 /* GuessResult.swift in Sources */,
+				965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */,
+				965F137127A7096F00E8A9F8 /* DateGuess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
