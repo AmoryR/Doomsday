@@ -9,11 +9,66 @@ import Foundation
 
 class DateGuess {
     
+    // All this dates share the same doomsday
+    // Format: MM-dd
+    private var specialDatesString: [String] = [
+        "4-4",
+        "6-6",
+        "8-8",
+        "10-10",
+        "12-12",
+        "9-5",
+        "5-9",
+        "7-11",
+        "11-7",
+        
+        "3-14", // PI day
+        "7-4", // Independence day
+        "10-31", // Halloween
+        "12-26" // Boxing day
+    ]
+    private var specialDates: [Date] = []
+    
     private let calendar = Calendar.current
+    
+    init() {
+        
+    }
+    
+    private func setSpecialsDates(year: UInt) {
+        
+        if self.specialDatesString.count != 13 {
+            return
+        }
+        
+        if self.isLeap(year: year) {
+            self.specialDatesString.append("1-4")
+            self.specialDatesString.append("2-29")
+        } else {
+            self.specialDatesString.append("1-3")
+            self.specialDatesString.append("2-28")
+        }
+        
+        self.populateSpecialDates(year: year)
+        
+    }
+    
+    private func populateSpecialDates(year: UInt) {
+        if self.specialDates.count == 0 {
+            for dateString in self.specialDatesString {
+                self.specialDates.append(Date.parse("\(year)-\(dateString)"))
+            }
+        }
+    }
+    
+    private func isLeap(year: UInt) -> Bool {
+        return true
+    }
     
     func guess(date: Date, day: Days) -> GuessResult {
         
         let components = self.calendar.dateComponents([.year], from: date)
+        self.setSpecialsDates(year: UInt(components.year!))
         
         // 1. Determine Doomsday day for date.getFullYear()
         let centuryDoomsday = self.getDoomsdayForCenturyOf(year: UInt(components.year!))
