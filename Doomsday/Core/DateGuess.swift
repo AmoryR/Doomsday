@@ -19,6 +19,8 @@ class DateGuess {
         let centuryDoomsday = self.getDoomsdayForCenturyOf(year: UInt(components.year!))
         
         // TODO: Get yearDoomsday from centuryDoomsday
+        let yearDoomsday = self.getYearDoomsday(centuryDoomsyear: centuryDoomsday, year: UInt(components.year!))
+        print(yearDoomsday)
         
         // 2. Get clostest special date from date and make the difference
         
@@ -29,6 +31,15 @@ class DateGuess {
         return .success
     }
     
+    private func getYearDoomsday(centuryDoomsyear: Days, year: UInt) -> Days {
+        
+        let yearToAdd = Int(year) - (Int(year/100) * 100)
+        let leapYearToAdd = Int(yearToAdd / 4)
+        
+        return getDayFromIndex(index: (getIndexFromDay(day: centuryDoomsyear) + yearToAdd + leapYearToAdd) % 7)
+    }
+    
+    // Not really century but first year century
     private func getDoomsdayForCenturyOf(year: UInt) -> Days {
         
         let century = Int(year / 100)

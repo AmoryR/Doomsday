@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Days: String {
+public enum Days: String {
     case monday = "monday"
     case tuesday = "tuesday"
     case wednesday = "wednesday"
@@ -15,4 +15,44 @@ enum Days: String {
     case friday = "friday"
     case saturday = "saturday"
     case sunday = "sunday"
+}
+
+public func getIndexFromDay(day: Days) -> Int {
+    switch day {
+    case .monday:
+        return 1
+    case .tuesday:
+        return 2
+    case .wednesday:
+        return 3
+    case .thursday:
+        return 4
+    case .friday:
+        return 5
+    case .saturday:
+        return 6
+    case .sunday:
+        return 0
+    }
+}
+
+public func getDayFromIndex(index: Int) -> Days {
+    switch index {
+    case 0:
+        return .sunday
+    case 1:
+        return .monday
+    case 2:
+        return .tuesday
+    case 3:
+        return .wednesday
+    case 4:
+        return .thursday
+    case 5:
+        return .friday
+    case 6:
+        return .saturday
+    default:
+        fatalError("Day index must be between 0 and 6. Found: \(index)")
+    }
 }
