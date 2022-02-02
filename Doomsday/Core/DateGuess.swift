@@ -62,7 +62,7 @@ class DateGuess {
     }
     
     private func isLeap(year: UInt) -> Bool {
-        return true
+        return false
     }
     
     func guess(date: Date, day: Days) -> GuessResult {
@@ -75,15 +75,40 @@ class DateGuess {
         
         // TODO: Get yearDoomsday from centuryDoomsday
         let yearDoomsday = self.getYearDoomsday(centuryDoomsyear: centuryDoomsday, year: UInt(components.year!))
-        print(yearDoomsday)
         
         // 2. Get clostest special date from date and make the difference
+        let testDate = Date.parse("\(UInt(components.year!))-4-3")
+        let clostest = self.getClostestSpecialDateOf(date: testDate)
+        print(clostest.dateString())
         
         // 3. Add difference to Doomsday day
         
         // 4. Check result
         
         return .success
+    }
+    
+    private func getClostestSpecialDateOf(date: Date) -> Date {
+        
+        var clostest: Date?
+        
+        
+        for specialDate in specialDates.sorted() {
+            
+            if let clostes = clostest {
+                let a = abs(specialDate.timeIntervalSince1970 - date.timeIntervalSince1970)
+                let b = abs(clostes.timeIntervalSince1970 - date.timeIntervalSince1970)
+                if a < b {
+                    clostest = specialDate
+                }
+            } else {
+                clostest = specialDate
+            }
+            
+        }
+        
+        
+        return clostest!
     }
     
     private func getYearDoomsday(centuryDoomsyear: Days, year: UInt) -> Days {
