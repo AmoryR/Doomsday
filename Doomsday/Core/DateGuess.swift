@@ -75,20 +75,28 @@ class DateGuess {
         
         // TODO: Get yearDoomsday from centuryDoomsday
         let yearDoomsday = self.getYearDoomsday(centuryDoomsyear: centuryDoomsday, year: UInt(components.year!))
+        let doomsdayDayIndex = getIndexFromDay(day: yearDoomsday)
         
         // 2. Get clostest special date from date and make the difference
-        let testDate = Date.parse("\(UInt(components.year!))-4-3")
-        let clostest = self.getClostestSpecialDateOf(date: testDate)
+        let clostest = self.getClostestSpecialDateOf(date: date)
         
         // 3. Add difference to Doomsday day
-        let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: testDate), to: calendar.startOfDay(for: clostest))
-        print(testDate.dateString())
-        print(clostest.dateString())
-        print(difference.day)
+        if let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: date), to: calendar.startOfDay(for: clostest)).day {
+            
+            // 4. Check result
+            let result = getDayFromIndex(index: abs(doomsdayDayIndex - difference) % 7)
+            
+            if result == day {
+                return .success
+            } else {
+                return .fail
+            }
+            
+        }
         
-        // 4. Check result
         
-        return .success
+        // Tell that is because there is an error
+        return .fail
     }
     
     private func getClostestSpecialDateOf(date: Date) -> Date {
