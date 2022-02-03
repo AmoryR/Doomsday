@@ -79,9 +79,12 @@ class DateGuess {
         // 2. Get clostest special date from date and make the difference
         let testDate = Date.parse("\(UInt(components.year!))-4-3")
         let clostest = self.getClostestSpecialDateOf(date: testDate)
-        print(clostest.dateString())
         
         // 3. Add difference to Doomsday day
+        let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: testDate), to: calendar.startOfDay(for: clostest))
+        print(testDate.dateString())
+        print(clostest.dateString())
+        print(difference.day)
         
         // 4. Check result
         
