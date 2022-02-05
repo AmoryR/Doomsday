@@ -35,11 +35,12 @@ struct ContentView: View {
                     .pickerStyle(.segmented)
                     
                     if let guessResult = guessResult {
-                        switch guessResult {
+                        switch guessResult.result {
                         case .success:
                             Text("Success")
                         case .fail:
                             Text("Fail")
+                            Text("Correct : \(guessResult.answer.rawValue)")
                         }
                         
                         Button("Retry") {
@@ -55,6 +56,7 @@ struct ContentView: View {
                     Button("Generate") {
                         self.generate()
                     }
+                    .padding()
                 }
                 
                 Spacer()
@@ -65,7 +67,7 @@ struct ContentView: View {
     }
 
     private func generate() {
-        self.randomDate = Date.randomBetween(start: "1500-01-01", end: "2500-01-01")
+        self.randomDate = Date.randomBetween(start: "1900-01-01", end: "2100-01-01")
     }
     
     private func retry() {

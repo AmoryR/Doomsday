@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Test this class!!
+// Work with TDB
+
 class DateGuess {
     
     // All this dates share the same doomsday
@@ -32,22 +35,22 @@ class DateGuess {
     private let calendar = Calendar.current
     
     init() {
-        
+        self.specialDates = []
     }
     
     private func setSpecialsDates(year: UInt) {
         
-        if self.specialDatesString.count != 13 {
-            return
-        }
-        
-        if self.isLeap(year: year) {
-            self.specialDatesString.append("1-4")
-            self.specialDatesString.append("2-29")
-        } else {
-            self.specialDatesString.append("1-3")
-            self.specialDatesString.append("2-28")
-        }
+//        if self.specialDatesString.count != 13 {
+//            return
+//        }
+//        
+//        if self.isLeap(year: year) {
+//            self.specialDatesString.append("1-4")
+//            self.specialDatesString.append("2-29")
+//        } else {
+//            self.specialDatesString.append("1-3")
+//            self.specialDatesString.append("2-28")
+//        }
         
         self.populateSpecialDates(year: year)
         
@@ -66,6 +69,7 @@ class DateGuess {
     }
     
     func guess(date: Date, day: Days) -> GuessResult {
+        self.specialDates = []
         
         let components = self.calendar.dateComponents([.year], from: date)
         self.setSpecialsDates(year: UInt(components.year!))
@@ -81,22 +85,23 @@ class DateGuess {
         let clostest = self.getClostestSpecialDateOf(date: date)
         
         // 3. Add difference to Doomsday day
-        if let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: date), to: calendar.startOfDay(for: clostest)).day {
-            
-            // 4. Check result
-            let result = getDayFromIndex(index: abs(doomsdayDayIndex - difference) % 7)
-            
-            if result == day {
-                return .success
-            } else {
-                return .fail
-            }
+        if let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: clostest), to: calendar.startOfDay(for: date)).day {
+            let resultDay: Days = getDayFromIndex(index: self.mod(a: doomsdayDayIndex + difference, b: 7))
+            let gues = GuessResult(guess: day, answer: resultDay)
+            return gues
             
         }
         
+        return GuessResult(guess: .sunday, answer: .tuesday)
         
         // Tell that is because there is an error
-        return .fail
+//        return GuessResult(result: .fail, answer: .monday)
+    }
+    
+    // https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/
+    private func mod(a: Int, b: Int) -> Int {
+        let c = a % b;
+        return c < 0 ? c + b : c
     }
     
     private func getClostestSpecialDateOf(date: Date) -> Date {

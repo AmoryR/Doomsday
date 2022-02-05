@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9612E00C27AC4AF100746691 /* DoomsdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612E00B27AC4AF100746691 /* DoomsdayTests.swift */; };
 		965F135827A6FCA300E8A9F8 /* DoomsdayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */; };
 		965F135A27A6FCA300E8A9F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F135927A6FCA300E8A9F8 /* ContentView.swift */; };
 		965F135C27A6FCA500E8A9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F135B27A6FCA500E8A9F8 /* Assets.xcassets */; };
@@ -17,7 +18,19 @@
 		965F137127A7096F00E8A9F8 /* DateGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F137027A7096F00E8A9F8 /* DateGuess.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9612E00D27AC4AF100746691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 965F134C27A6FCA300E8A9F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 965F135327A6FCA300E8A9F8;
+			remoteInfo = Doomsday;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9612E00927AC4AF100746691 /* DoomsdayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoomsdayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9612E00B27AC4AF100746691 /* DoomsdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayTests.swift; sourceTree = "<group>"; };
 		965F135427A6FCA300E8A9F8 /* Doomsday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doomsday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayApp.swift; sourceTree = "<group>"; };
 		965F135927A6FCA300E8A9F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9612E00627AC4AF100746691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		965F135127A6FCA300E8A9F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9612E00A27AC4AF100746691 /* DoomsdayTests */ = {
+			isa = PBXGroup;
+			children = (
+				9612E00B27AC4AF100746691 /* DoomsdayTests.swift */,
+			);
+			path = DoomsdayTests;
+			sourceTree = "<group>";
+		};
 		965F134B27A6FCA300E8A9F8 = {
 			isa = PBXGroup;
 			children = (
 				965F135627A6FCA300E8A9F8 /* Doomsday */,
+				9612E00A27AC4AF100746691 /* DoomsdayTests */,
 				965F135527A6FCA300E8A9F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				965F135427A6FCA300E8A9F8 /* Doomsday.app */,
+				9612E00927AC4AF100746691 /* DoomsdayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +152,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9612E00827AC4AF100746691 /* DoomsdayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9612E01127AC4AF100746691 /* Build configuration list for PBXNativeTarget "DoomsdayTests" */;
+			buildPhases = (
+				9612E00527AC4AF100746691 /* Sources */,
+				9612E00627AC4AF100746691 /* Frameworks */,
+				9612E00727AC4AF100746691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9612E00E27AC4AF100746691 /* PBXTargetDependency */,
+			);
+			name = DoomsdayTests;
+			productName = DoomsdayTests;
+			productReference = 9612E00927AC4AF100746691 /* DoomsdayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		965F135327A6FCA300E8A9F8 /* Doomsday */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 965F136227A6FCA500E8A9F8 /* Build configuration list for PBXNativeTarget "Doomsday" */;
@@ -149,6 +197,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					9612E00827AC4AF100746691 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 965F135327A6FCA300E8A9F8;
+					};
 					965F135327A6FCA300E8A9F8 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -168,11 +220,19 @@
 			projectRoot = "";
 			targets = (
 				965F135327A6FCA300E8A9F8 /* Doomsday */,
+				9612E00827AC4AF100746691 /* DoomsdayTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9612E00727AC4AF100746691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		965F135227A6FCA300E8A9F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +245,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9612E00527AC4AF100746691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9612E00C27AC4AF100746691 /* DoomsdayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		965F135027A6FCA300E8A9F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,7 +268,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9612E00E27AC4AF100746691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 965F135327A6FCA300E8A9F8 /* Doomsday */;
+			targetProxy = 9612E00D27AC4AF100746691 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9612E00F27AC4AF100746691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UNF284GYZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amoryrouault.DoomsdayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Doomsday.app/Doomsday";
+			};
+			name = Debug;
+		};
+		9612E01027AC4AF100746691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UNF284GYZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amoryrouault.DoomsdayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Doomsday.app/Doomsday";
+			};
+			name = Release;
+		};
 		965F136027A6FCA500E8A9F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -378,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9612E01127AC4AF100746691 /* Build configuration list for PBXNativeTarget "DoomsdayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9612E00F27AC4AF100746691 /* Debug */,
+				9612E01027AC4AF100746691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		965F134F27A6FCA300E8A9F8 /* Build configuration list for PBXProject "Doomsday" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
