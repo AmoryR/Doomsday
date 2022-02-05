@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		9612E00C27AC4AF100746691 /* DoomsdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612E00B27AC4AF100746691 /* DoomsdayTests.swift */; };
 		965F135827A6FCA300E8A9F8 /* DoomsdayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */; };
-		965F135A27A6FCA300E8A9F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F135927A6FCA300E8A9F8 /* ContentView.swift */; };
 		965F135C27A6FCA500E8A9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F135B27A6FCA500E8A9F8 /* Assets.xcassets */; };
 		965F135F27A6FCA500E8A9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F135E27A6FCA500E8A9F8 /* Preview Assets.xcassets */; };
 		965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136A27A704E600E8A9F8 /* Date+Extensions.swift */; };
-		965F136D27A7066300E8A9F8 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136C27A7066300E8A9F8 /* Days.swift */; };
-		965F136F27A708AD00E8A9F8 /* GuessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136E27A708AD00E8A9F8 /* GuessResult.swift */; };
-		965F137127A7096F00E8A9F8 /* DateGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F137027A7096F00E8A9F8 /* DateGuess.swift */; };
+		965F136D27A7066300E8A9F8 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136C27A7066300E8A9F8 /* Day.swift */; };
+		965F136F27A708AD00E8A9F8 /* DayGuessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F136E27A708AD00E8A9F8 /* DayGuessResult.swift */; };
+		965F137127A7096F00E8A9F8 /* DayGuessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F137027A7096F00E8A9F8 /* DayGuessService.swift */; };
+		967626DE27AEB39100916BBA /* DoomsdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626DD27AEB39100916BBA /* DoomsdayView.swift */; };
+		967626E127AEBBB500916BBA /* PlainButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626E027AEBBB500916BBA /* PlainButtonStyle.swift */; };
+		967626E327AEC11800916BBA /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626E227AEC11800916BBA /* HowToView.swift */; };
+		967626E727AEC78300916BBA /* Step1DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626E627AEC78300916BBA /* Step1DetailView.swift */; };
+		967626E927AEC7B900916BBA /* Step2DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626E827AEC7B900916BBA /* Step2DetailView.swift */; };
+		967626EB27AEC7C500916BBA /* Step3DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EA27AEC7C500916BBA /* Step3DetailView.swift */; };
+		967626ED27AEC7D000916BBA /* Step4DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EC27AEC7D000916BBA /* Step4DetailView.swift */; };
+		967626F027AEDDA600916BBA /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EF27AEDDA600916BBA /* TrainingView.swift */; };
+		967626F327AEDE0500916BBA /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F227AEDE0500916BBA /* ChallengeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +41,21 @@
 		9612E00B27AC4AF100746691 /* DoomsdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayTests.swift; sourceTree = "<group>"; };
 		965F135427A6FCA300E8A9F8 /* Doomsday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doomsday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayApp.swift; sourceTree = "<group>"; };
-		965F135927A6FCA300E8A9F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		965F135B27A6FCA500E8A9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		965F135E27A6FCA500E8A9F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		965F136A27A704E600E8A9F8 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		965F136C27A7066300E8A9F8 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
-		965F136E27A708AD00E8A9F8 /* GuessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessResult.swift; sourceTree = "<group>"; };
-		965F137027A7096F00E8A9F8 /* DateGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGuess.swift; sourceTree = "<group>"; };
+		965F136C27A7066300E8A9F8 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		965F136E27A708AD00E8A9F8 /* DayGuessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGuessResult.swift; sourceTree = "<group>"; };
+		965F137027A7096F00E8A9F8 /* DayGuessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGuessService.swift; sourceTree = "<group>"; };
+		967626DD27AEB39100916BBA /* DoomsdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayView.swift; sourceTree = "<group>"; };
+		967626E027AEBBB500916BBA /* PlainButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButtonStyle.swift; sourceTree = "<group>"; };
+		967626E227AEC11800916BBA /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
+		967626E627AEC78300916BBA /* Step1DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1DetailView.swift; sourceTree = "<group>"; };
+		967626E827AEC7B900916BBA /* Step2DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2DetailView.swift; sourceTree = "<group>"; };
+		967626EA27AEC7C500916BBA /* Step3DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3DetailView.swift; sourceTree = "<group>"; };
+		967626EC27AEC7D000916BBA /* Step4DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4DetailView.swift; sourceTree = "<group>"; };
+		967626EF27AEDDA600916BBA /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		967626F227AEDE0500916BBA /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +110,6 @@
 				965F136627A7039D00E8A9F8 /* Views */,
 				965F136527A7039000E8A9F8 /* Models */,
 				965F135727A6FCA300E8A9F8 /* DoomsdayApp.swift */,
-				965F135927A6FCA300E8A9F8 /* ContentView.swift */,
 				965F135B27A6FCA500E8A9F8 /* Assets.xcassets */,
 				965F135D27A6FCA500E8A9F8 /* Preview Content */,
 			);
@@ -112,6 +127,7 @@
 		965F136527A7039000E8A9F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				965F136E27A708AD00E8A9F8 /* DayGuessResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +135,10 @@
 		965F136627A7039D00E8A9F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				967626F127AEDDF600916BBA /* Challenge */,
+				967626EE27AEDA5E00916BBA /* Training */,
+				967626E427AEC68B00916BBA /* HowTo */,
+				967626DD27AEB39100916BBA /* DoomsdayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +146,7 @@
 		965F136727A703A300E8A9F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				965F137027A7096F00E8A9F8 /* DayGuessService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -133,10 +154,9 @@
 		965F136827A703A900E8A9F8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				967626DF27AEBBA200916BBA /* Styles */,
 				965F136927A704D800E8A9F8 /* Extensions */,
-				965F136C27A7066300E8A9F8 /* Days.swift */,
-				965F136E27A708AD00E8A9F8 /* GuessResult.swift */,
-				965F137027A7096F00E8A9F8 /* DateGuess.swift */,
+				965F136C27A7066300E8A9F8 /* Day.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -147,6 +167,50 @@
 				965F136A27A704E600E8A9F8 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		967626DF27AEBBA200916BBA /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				967626E027AEBBB500916BBA /* PlainButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		967626E427AEC68B00916BBA /* HowTo */ = {
+			isa = PBXGroup;
+			children = (
+				967626E527AEC76800916BBA /* Steps */,
+				967626E227AEC11800916BBA /* HowToView.swift */,
+			);
+			path = HowTo;
+			sourceTree = "<group>";
+		};
+		967626E527AEC76800916BBA /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				967626E627AEC78300916BBA /* Step1DetailView.swift */,
+				967626E827AEC7B900916BBA /* Step2DetailView.swift */,
+				967626EA27AEC7C500916BBA /* Step3DetailView.swift */,
+				967626EC27AEC7D000916BBA /* Step4DetailView.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		967626EE27AEDA5E00916BBA /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				967626EF27AEDDA600916BBA /* TrainingView.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		967626F127AEDDF600916BBA /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				967626F227AEDE0500916BBA /* ChallengeView.swift */,
+			);
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,12 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965F135A27A6FCA300E8A9F8 /* ContentView.swift in Sources */,
 				965F135827A6FCA300E8A9F8 /* DoomsdayApp.swift in Sources */,
-				965F136D27A7066300E8A9F8 /* Days.swift in Sources */,
-				965F136F27A708AD00E8A9F8 /* GuessResult.swift in Sources */,
+				965F136D27A7066300E8A9F8 /* Day.swift in Sources */,
+				967626ED27AEC7D000916BBA /* Step4DetailView.swift in Sources */,
+				967626E927AEC7B900916BBA /* Step2DetailView.swift in Sources */,
+				967626EB27AEC7C500916BBA /* Step3DetailView.swift in Sources */,
+				965F136F27A708AD00E8A9F8 /* DayGuessResult.swift in Sources */,
+				967626E127AEBBB500916BBA /* PlainButtonStyle.swift in Sources */,
 				965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */,
-				965F137127A7096F00E8A9F8 /* DateGuess.swift in Sources */,
+				967626F027AEDDA600916BBA /* TrainingView.swift in Sources */,
+				965F137127A7096F00E8A9F8 /* DayGuessService.swift in Sources */,
+				967626F327AEDE0500916BBA /* ChallengeView.swift in Sources */,
+				967626E727AEC78300916BBA /* Step1DetailView.swift in Sources */,
+				967626E327AEC11800916BBA /* HowToView.swift in Sources */,
+				967626DE27AEB39100916BBA /* DoomsdayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

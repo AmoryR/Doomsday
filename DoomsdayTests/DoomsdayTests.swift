@@ -27,7 +27,7 @@ class DoomsdayTests: XCTestCase {
         // 1998-04-17 => Friday
         // 1599-04-04 => Sunday
         
-        let guessingDate = DateGuess()
+        let guessingDate = DayGuessService()
         let result = guessingDate.guess(date: Date.parse("1998-04-17"), day: .friday)
         XCTAssertEqual(result.result, .success, "Test")
 

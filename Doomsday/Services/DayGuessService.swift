@@ -1,5 +1,5 @@
 //
-//  DateGuess.swift
+//  DayGuessService.swift
 //  Doomsday
 //
 //  Created by Amory Rouault on 30/01/2022.
@@ -7,10 +7,7 @@
 
 import Foundation
 
-// Test this class!!
-// Work with TDB
-
-class DateGuess {
+class DayGuessService {
     
     // All this dates share the same doomsday
     // Format: MM-dd
@@ -36,6 +33,10 @@ class DateGuess {
     
     init() {
         self.specialDates = []
+    }
+    
+    func generateRandomDate() -> Date {
+        return Date.randomBetween(start: "1900-01-01", end: "2100-01-01")
     }
     
     private func setSpecialsDates(year: UInt) {
@@ -68,7 +69,7 @@ class DateGuess {
         return false
     }
     
-    func guess(date: Date, day: Days) -> GuessResult {
+    func guess(date: Date, day: Day) -> DayGuessResult {
         self.specialDates = []
         
         let components = self.calendar.dateComponents([.year], from: date)
@@ -79,20 +80,20 @@ class DateGuess {
         
         // TODO: Get yearDoomsday from centuryDoomsday
         let yearDoomsday = self.getYearDoomsday(centuryDoomsyear: centuryDoomsday, year: UInt(components.year!))
-        let doomsdayDayIndex = getIndexFromDay(day: yearDoomsday)
+        let doomsdayDayIndex = Day.getIndexFrom(day: yearDoomsday)
         
         // 2. Get clostest special date from date and make the difference
         let clostest = self.getClostestSpecialDateOf(date: date)
         
         // 3. Add difference to Doomsday day
         if let difference = self.calendar.dateComponents([.day], from: calendar.startOfDay(for: clostest), to: calendar.startOfDay(for: date)).day {
-            let resultDay: Days = getDayFromIndex(index: self.mod(a: doomsdayDayIndex + difference, b: 7))
-            let gues = GuessResult(guess: day, answer: resultDay)
+            let resultDay: Day = Day.getDayFrom(index: self.mod(a: doomsdayDayIndex + difference, b: 7))
+            let gues = DayGuessResult(guess: day, answer: resultDay)
             return gues
             
         }
         
-        return GuessResult(guess: .sunday, answer: .tuesday)
+        return DayGuessResult(guess: .sunday, answer: .tuesday)
         
         // Tell that is because there is an error
 //        return GuessResult(result: .fail, answer: .monday)
@@ -127,16 +128,16 @@ class DateGuess {
         return clostest!
     }
     
-    private func getYearDoomsday(centuryDoomsyear: Days, year: UInt) -> Days {
+    private func getYearDoomsday(centuryDoomsyear: Day, year: UInt) -> Day {
         
         let yearToAdd = Int(year) - (Int(year/100) * 100)
         let leapYearToAdd = Int(yearToAdd / 4)
         
-        return getDayFromIndex(index: (getIndexFromDay(day: centuryDoomsyear) + yearToAdd + leapYearToAdd) % 7)
+        return Day.getDayFrom(index: (Day.getIndexFrom(day: centuryDoomsyear) + yearToAdd + leapYearToAdd) % 7)
     }
     
     // Not really century but first year century
-    private func getDoomsdayForCenturyOf(year: UInt) -> Days {
+    private func getDoomsdayForCenturyOf(year: UInt) -> Day {
         
         let century = Int(year / 100)
         

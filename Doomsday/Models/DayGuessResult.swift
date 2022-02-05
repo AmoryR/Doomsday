@@ -1,5 +1,5 @@
 //
-//  GuessResult.swift
+//  DayGuessResult.swift
 //  Doomsday
 //
 //  Created by Amory Rouault on 30/01/2022.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum Result {
-    case success, fail
+enum Result: String {
+    case success = "success", fail = "fail"
 }
 
-struct GuessResult {
+struct DayGuessResult {
     var result: Result
-    var answer: Days
+    var answer: Day
     
-    init(guess: Days, answer: Days) {
+    init(guess: Day, answer: Day) {
         self.answer = answer
         if answer.rawValue == guess.rawValue {
             self.result = .success
