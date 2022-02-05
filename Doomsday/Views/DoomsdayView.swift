@@ -15,70 +15,10 @@ struct DoomsdayView: View {
     
     @State private var navigationSelection: DoomsdayNavigationView?
     
-//    private let dayGuessService = DayGuessService()
-//
-//    @State private var randomDate: Date?
-//    @State private var dayGuess = Day.monday
-//    @State private var guessResult: DayGuessResult?
-    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 
-//                if let randomDate = self.randomDate {
-//
-//                    if let guessResult = self.guessResult {
-//
-//                        switch guessResult.result {
-//                        case .success:
-//                            Text("Congratulations!")
-//                                .font(.title2)
-//                                .padding(.horizontal)
-//                            Text("\(randomDate.dateString()) is a \(guessResult.answer.rawValue).")
-//                                .padding(.horizontal)
-//                        case .fail:
-//                            Text("Oops!")
-//                                .font(.title2)
-//                                .padding(.horizontal)
-//                            Text("\(randomDate.dateString()) is actualy a \(guessResult.answer.rawValue).")
-//                                .padding(.horizontal)
-//                        }
-//
-//                        Button("Return") {
-//                            self.reset()
-//                        }
-//                        .buttonStyle(PlainButtonStyle())
-//                        .padding(.horizontal)
-//                    } else {
-//                        Text("Guess the day of : \(randomDate.dateString())")
-//                            .padding(.horizontal)
-//
-//                        Picker("", selection: $dayGuess) {
-//                            Text("Mon").tag(Day.monday)
-//                            Text("Tue").tag(Day.tuesday)
-//                            Text("Wed").tag(Day.wednesday)
-//                            Text("Thu").tag(Day.thursday)
-//                            Text("Fri").tag(Day.friday)
-//                            Text("Sat").tag(Day.saturday)
-//                            Text("Sun").tag(Day.sunday)
-//                        }
-//                        .pickerStyle(.segmented)
-//                        .padding(.horizontal)
-//
-//                        Button("Guess") {
-//                            self.guessResult = self.dayGuessService.guess(date: randomDate, day: self.dayGuess)
-//                        }
-//                        .buttonStyle(PlainButtonStyle())
-//                        .padding(.horizontal)
-//
-//                        NavigationLink("How To?", destination: HowToView())
-//                            .padding(.horizontal)
-//                    }
-//
-//                    Spacer()
-//                } else {
-//
-//                }
                 
                 // Navigation links
                 NavigationLink(
@@ -121,12 +61,7 @@ struct DoomsdayView: View {
             .navigationTitle("Doomsday")
         }
     }
-    
-//    private func reset() {
-//        self.dayGuess = .monday
-//        self.guessResult = nil
-//        self.randomDate = nil
-//    }
+   
 }
 
 struct DoomsdayView_Previews: PreviewProvider {
