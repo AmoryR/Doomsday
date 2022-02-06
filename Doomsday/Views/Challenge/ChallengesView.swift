@@ -7,100 +7,11 @@
 
 import SwiftUI
 
-class GuessChallenge: ObservableObject {
-    let date: Date
-    @Published var guess: Day = .monday
-    var result: DayGuessResult?
-    
-    // Time
-    
-    init() {
-        self.date = Date.randomBetween(start: "1500-01-01", end: "2500-01-01")
-    }
-    
-    func valid() {
-        let dayGuess = DayGuessService()
-        self.result = dayGuess.guess(date: self.date, day: self.guess)
-    }
-}
-
-class GuessChallenges: ObservableObject {
-    
-    @Published var challenges = [GuessChallenge]()
-    @Published var currentIndex = 0
-    @Published var finished = false
-    
-    var current: GuessChallenge {
-        get {
-            return self.challenges[self.currentIndex]
-        }
-    }
-    
-    init() {}
-    
-    func start(rounds: Int) {
-        // Generate challenges
-        for _ in 0..<rounds {
-            self.challenges.append(GuessChallenge())
-        }
-    }
-    
-    func reset() {
-        self.finished = false
-        self.currentIndex = 0
-        self.challenges = []
-    }
-    
-    func currentChallenge() -> GuessChallenge {
-        return self.challenges[self.currentIndex]
-    }
-    
-    func next() {
-        if let _ = self.current.result {} else {
-            self.current.valid()
-        }
-        
-        if self.currentIndex < self.challenges.count - 1 {
-            self.currentIndex += 1;
-        } else {
-            self.finished = true
-        }
-    }
-    
-}
-
-struct ChallengeView: View {
-    
-    @ObservedObject var challenge: GuessChallenge
-    
-    var body: some View {
-        VStack {
-            Text("Guess the day of : \(self.challenge.date.dateString())")
-                .padding(.horizontal)
-            
-            Picker("", selection: self.$challenge.guess) {
-                Text("Mon").tag(Day.monday)
-                Text("Tue").tag(Day.tuesday)
-                Text("Wed").tag(Day.wednesday)
-                Text("Thu").tag(Day.thursday)
-                Text("Fri").tag(Day.friday)
-                Text("Sat").tag(Day.saturday)
-                Text("Sun").tag(Day.sunday)
-            }
-            .pickerStyle(.segmented)
-            .padding(.horizontal)
-            
-            Spacer()
-        }
-    }
-    
-}
-
 struct ChallengesView: View {
     
-    @State private var rounds = 5
+    @State private var rounds = 2
     
-    @ObservedObject private var challenges = GuessChallenges()
+    @ObservedObject private var challenges = DayGuessChallenges()
     
     var body: some View {
         VStack {
@@ -109,8 +20,7 @@ struct ChallengesView: View {
                 
                 if self.challenges.finished {
                     
-                    Text("Finished")
-                    Text("Show result ...")
+                    ChallengesResultView(challenges: self.challenges)
                     
                     Button("Retry") {
                         self.challenges.reset()
@@ -149,7 +59,7 @@ struct ChallengesView: View {
     }
 }
 
-struct ChallengeView_Previews: PreviewProvider {
+struct ChallengesView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ChallengesView()

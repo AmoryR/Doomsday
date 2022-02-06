@@ -24,6 +24,10 @@
 		967626ED27AEC7D000916BBA /* Step4DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EC27AEC7D000916BBA /* Step4DetailView.swift */; };
 		967626F027AEDDA600916BBA /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EF27AEDDA600916BBA /* TrainingView.swift */; };
 		967626F327AEDE0500916BBA /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F227AEDE0500916BBA /* ChallengesView.swift */; };
+		967626F527AFF76900916BBA /* ChallengesResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F427AFF76900916BBA /* ChallengesResultView.swift */; };
+		967626F727AFFD2C00916BBA /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F627AFFD2C00916BBA /* ChallengeView.swift */; };
+		967626F927AFFE5A00916BBA /* DayGuessChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F827AFFE5A00916BBA /* DayGuessChallenges.swift */; };
+		967626FB27AFFE9000916BBA /* DayGuessChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626FA27AFFE9000916BBA /* DayGuessChallenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		967626EC27AEC7D000916BBA /* Step4DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4DetailView.swift; sourceTree = "<group>"; };
 		967626EF27AEDDA600916BBA /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		967626F227AEDE0500916BBA /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
+		967626F427AFF76900916BBA /* ChallengesResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesResultView.swift; sourceTree = "<group>"; };
+		967626F627AFFD2C00916BBA /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		967626F827AFFE5A00916BBA /* DayGuessChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGuessChallenges.swift; sourceTree = "<group>"; };
+		967626FA27AFFE9000916BBA /* DayGuessChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGuessChallenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				965F136E27A708AD00E8A9F8 /* DayGuessResult.swift */,
+				967626F827AFFE5A00916BBA /* DayGuessChallenges.swift */,
+				967626FA27AFFE9000916BBA /* DayGuessChallenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				967626F227AEDE0500916BBA /* ChallengesView.swift */,
+				967626F427AFF76900916BBA /* ChallengesResultView.swift */,
+				967626F627AFFD2C00916BBA /* ChallengeView.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -329,9 +341,13 @@
 				965F136F27A708AD00E8A9F8 /* DayGuessResult.swift in Sources */,
 				967626E127AEBBB500916BBA /* PlainButtonStyle.swift in Sources */,
 				965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */,
+				967626F927AFFE5A00916BBA /* DayGuessChallenges.swift in Sources */,
 				967626F027AEDDA600916BBA /* TrainingView.swift in Sources */,
 				965F137127A7096F00E8A9F8 /* DayGuessService.swift in Sources */,
 				967626F327AEDE0500916BBA /* ChallengesView.swift in Sources */,
+				967626F527AFF76900916BBA /* ChallengesResultView.swift in Sources */,
+				967626F727AFFD2C00916BBA /* ChallengeView.swift in Sources */,
+				967626FB27AFFE9000916BBA /* DayGuessChallenge.swift in Sources */,
 				967626E727AEC78300916BBA /* Step1DetailView.swift in Sources */,
 				967626E327AEC11800916BBA /* HowToView.swift in Sources */,
 				967626DE27AEB39100916BBA /* DoomsdayView.swift in Sources */,
