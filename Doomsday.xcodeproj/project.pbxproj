@@ -23,7 +23,7 @@
 		967626EB27AEC7C500916BBA /* Step3DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EA27AEC7C500916BBA /* Step3DetailView.swift */; };
 		967626ED27AEC7D000916BBA /* Step4DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EC27AEC7D000916BBA /* Step4DetailView.swift */; };
 		967626F027AEDDA600916BBA /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626EF27AEDDA600916BBA /* TrainingView.swift */; };
-		967626F327AEDE0500916BBA /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F227AEDE0500916BBA /* ChallengeView.swift */; };
+		967626F327AEDE0500916BBA /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967626F227AEDE0500916BBA /* ChallengesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		967626EA27AEC7C500916BBA /* Step3DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3DetailView.swift; sourceTree = "<group>"; };
 		967626EC27AEC7D000916BBA /* Step4DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4DetailView.swift; sourceTree = "<group>"; };
 		967626EF27AEDDA600916BBA /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
-		967626F227AEDE0500916BBA /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		967626F227AEDE0500916BBA /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +208,7 @@
 		967626F127AEDDF600916BBA /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				967626F227AEDE0500916BBA /* ChallengeView.swift */,
+				967626F227AEDE0500916BBA /* ChallengesView.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 				965F136B27A704E600E8A9F8 /* Date+Extensions.swift in Sources */,
 				967626F027AEDDA600916BBA /* TrainingView.swift in Sources */,
 				965F137127A7096F00E8A9F8 /* DayGuessService.swift in Sources */,
-				967626F327AEDE0500916BBA /* ChallengeView.swift in Sources */,
+				967626F327AEDE0500916BBA /* ChallengesView.swift in Sources */,
 				967626E727AEC78300916BBA /* Step1DetailView.swift in Sources */,
 				967626E327AEC11800916BBA /* HowToView.swift in Sources */,
 				967626DE27AEB39100916BBA /* DoomsdayView.swift in Sources */,

@@ -34,7 +34,7 @@ struct DoomsdayView: View {
                 ) { EmptyView() }
                 
                 NavigationLink(
-                    destination: ChallengeView(),
+                    destination: ChallengesView(),
                     tag: DoomsdayNavigationView.challenge,
                     selection: self.$navigationSelection
                 ) { EmptyView() }
